@@ -1,0 +1,135 @@
+/* ================== */
+/* ESTILOS GERAIS */
+/* ================== */
+
+/* Faz o body e html ocuparem só o necessário */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 250px;   
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* Estilo para todo o corpo da página */
+body {
+    background-color: #46548F;
+}
+
+/* Container principal para o conteúdo centralizado */
+.main-container {
+    background-color: #46548F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+/* Container para os cards */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* ================== */
+/* COMPONENTES */
+/* ================== */
+
+/* Cabeçalho */
+.header {
+    background-color: #BBB8BC;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    color: #46548F;
+    font-weight: bold;
+    font-size: 1.5em;
+    box-sizing: border-box;
+}
+
+/* Cards */
+.feature-section-tema,
+.feature-section-texto {
+    background-color: #999EE1;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    width: 100%;       
+    max-width: 260px;   
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Título dos cards */
+.feature-section-tema h2, .feature-section-texto h2 {
+    font-family: 'League Spartan', sans-serif;
+    color: #2E302F;
+    font-weight: 900;
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+/* Botão de cor (lua/sol) */
+.theme-toggle {
+    background-color: #BBB8BC;
+    border: 3px solid #3D5188;;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    /* Adicionado: Oculta qualquer conteúdo que exceda as bordas do círculo */
+    overflow: hidden; 
+}
+
+/* NOVO: Estilo para a imagem dentro do botão de tema */
+.theme-toggle img {
+    width: 100%;   /* Faz a imagem preencher a largura do botão */
+    height: 100%;  /* Faz a imagem preencher a altura do botão */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar ou esticar */
+    /* Você pode experimentar com 'cover' ou 'fill' se preferir um preenchimento diferente */
+}
+
+/* Botões de seleção de fonte (estilo comum) */
+.font-button {
+    background-color: #BBB8BC;
+    border: 3px solid #3D5188;
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 16px;
+    color: #2E302F;
+}
+
+/* ========================== */
+/* ESTADOS E MODIFICADORES */
+/* ========================== */
+
+/* Efeito hover nos botões de texto */
+.feature-section-texto button:hover {
+    background-color: #8A97D2;
+}
+
+/* Estilos de fonte específicos para os botões */
+#lexend-btn {
+    font-family: 'Lexend', sans-serif;
+}
+
+#atkinson-btn {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
