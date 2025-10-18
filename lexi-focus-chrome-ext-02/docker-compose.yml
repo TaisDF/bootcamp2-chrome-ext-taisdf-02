@@ -1,0 +1,25 @@
+services:
+  # Nome do nosso serviço
+  e2e:
+    # Diz para construir a imagem usando o Dockerfile na pasta atual (.)
+    build: .
+    
+    # (Opcional) Dá um nome para a imagem local
+    image: bootcamp/ext-e2e:latest
+    
+    # Necessário para o Chromium não travar por falta de memória compartilhada
+    shm_size: 2gb 
+    
+    # (Opcional) Monta seus arquivos locais sobre os arquivos do container.
+    # Isso é útil para desenvolvimento, mas pode ser removido.
+    # Vamos manter como no exemplo do prompt:
+    volumes:
+      - ./:/app
+      
+    # Define o diretório de trabalho padrão para o comando
+    working_dir: /app
+
+    # O comando que o container vai rodar.
+    # Usamos "npm run test" (que roda "build" E "test:e2e")
+    # Isso garante que a pasta 'dist' seja criada DENTRO do container.
+    command: npm run test

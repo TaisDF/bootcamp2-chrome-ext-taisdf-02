@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    /* Módulos ES (Obrigatório para "type": "module") */
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+
+    /* Tipos */
+    "types": ["node", "@playwright/test"], // Diz para carregar os tipos
+
+    /* Padrões */
+    "esModuleInterop": true,
+    "strict": true, // Boa prática
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    // Diz ao TS quais arquivos ele deve "ler"
+    "tests/**/*.ts",
+    "playwright.config.ts"
+  ]
+}
